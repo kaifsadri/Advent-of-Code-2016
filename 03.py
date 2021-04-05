@@ -10,28 +10,18 @@ def possible(t):
 
 n = 0
 for line in L:
-    a = line[2:5]
-    b = line[7:10]
-    c = line[12:15]
-    a = int(a.strip())
-    b = int(b.strip())
-    c = int(c.strip())
-    n += possible([a, b, c])
+    t = list(map(lambda x: int(x), line.split()))
+    n += possible(t)
 print("Part 1: ", n)
 
 col1 = list()
 col2 = list()
 col3 = list()
 for line in L:
-    a = line[2:5]
-    b = line[7:10]
-    c = line[12:15]
-    a = int(a.strip())
-    b = int(b.strip())
-    c = int(c.strip())
-    col1.append(a)
-    col2.append(b)
-    col3.append(c)
+    t = list(map(lambda x: int(x), line.split()))
+    col1.append(t[0])
+    col2.append(t[1])
+    col3.append(t[2])
 n = 0
 for i in range(0, len(col1), 3):
     n += possible(col1[i : i + 3])
