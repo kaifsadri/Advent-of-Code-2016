@@ -1,3 +1,7 @@
+# This is not the proper solution,
+# I just wanted to practice monte-carlo simulation 
+# so I wrote it this way.
+
 from random import sample, choice
 from collections import Counter
 
