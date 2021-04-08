@@ -3,7 +3,6 @@ def run(part, N):
     while len(L) < N:
         b = L[::-1]
         L = L + "0" + b.replace("1", "x").replace("0", "1").replace("x", "0")
-
     L = L[:N]
     while len(L) % 2 == 0:
         L = "".join(["1" if L[i] == L[i + 1] else "0" for i in range(0, len(L), 2)])
